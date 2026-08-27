@@ -1,6 +1,6 @@
 /**
- * Portfolio Website Script
- * Author: Kyeonggu Lee
+ * Academic & Research Portfolio Script
+ * Author: Kyeonggu Lee (Université de Montréal)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,13 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Toggle theme listener
-  themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 
   // ==========================================
   // 2. Mobile Navigation Menu
@@ -87,13 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const typedTextSpan = document.getElementById('typed-text');
   const textArray = [
-    'scalable web applications',
-    'modern cloud architectures',
-    'clean user experiences',
-    'robust backend APIs'
+    'Brain-Computer Interfaces (BCI)',
+    'Artificial Intelligence & Deep Learning',
+    'Computational Neuroscience',
+    'EEG, fNIRS & MEG Neuroimaging',
+    'Photobiomodulation & Neuromodulation',
+    'Psychiatric & Cognitive Diagnostics'
   ];
-  const typingDelay = 80;
-  const erasingDelay = 40;
+  const typingDelay = 75;
+  const erasingDelay = 35;
   const newTextDelay = 1800;
   let textArrayIndex = 0;
   let charIndex = 0;
@@ -128,36 +132,130 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 5. Project Filtering
+  // 5. Toast Notification System
   // ==========================================
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
+  const toastMsg = document.getElementById('toast-msg');
+  const toastText = document.getElementById('toast-text');
+  let toastTimer = null;
 
-  filterBtns.forEach(btn => {
+  function showToast(message) {
+    if (!toastMsg) return;
+    if (toastText) toastText.textContent = message;
+    
+    toastMsg.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    
+    toastTimer = setTimeout(() => {
+      toastMsg.classList.remove('show');
+    }, 3000);
+  }
+
+  // ==========================================
+  // 6. Publications Filtering & Search
+  // ==========================================
+  const pubFilterBtns = document.querySelectorAll('.pub-filter-btn');
+  const publicationCards = document.querySelectorAll('.publication-card');
+  const pubSearchInput = document.getElementById('pub-search-input');
+
+  let activePubFilter = 'all';
+  let activeSearchQuery = '';
+
+  function filterPublications() {
+    publicationCards.forEach(card => {
+      const categoryStr = card.getAttribute('data-category') || '';
+      const textContent = card.innerText.toLowerCase();
+      
+      const matchesCategory = (activePubFilter === 'all') || categoryStr.includes(activePubFilter);
+      const matchesSearch = !activeSearchQuery || textContent.includes(activeSearchQuery);
+
+      if (matchesCategory && matchesSearch) {
+        card.classList.remove('hide');
+        card.style.opacity = '0';
+        setTimeout(() => { card.style.opacity = '1'; }, 40);
+      } else {
+        card.classList.add('hide');
+      }
+    });
+  }
+
+  pubFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Toggle active filter button style
-      filterBtns.forEach(b => b.classList.remove('active'));
+      pubFilterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
+      activePubFilter = btn.getAttribute('data-filter');
+      filterPublications();
+    });
+  });
 
-      const filterValue = btn.getAttribute('data-filter');
+  if (pubSearchInput) {
+    pubSearchInput.addEventListener('input', (e) => {
+      activeSearchQuery = e.target.value.trim().toLowerCase();
+      filterPublications();
+    });
+  }
 
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
-          card.classList.remove('hide');
-          card.style.opacity = '0';
-          setTimeout(() => {
-            card.style.opacity = '1';
-          }, 50);
-        } else {
-          card.classList.add('hide');
-        }
-      });
+  // ==========================================
+  // 7. Citation Copy Handlers (APA & BibTeX)
+  // ==========================================
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const citation = btn.getAttribute('data-citation');
+      if (citation && navigator.clipboard) {
+        navigator.clipboard.writeText(citation).then(() => {
+          showToast('APA citation copied to clipboard!');
+        }).catch(() => {
+          showToast('Copied to clipboard!');
+        });
+      }
+    });
+  });
+
+  document.querySelectorAll('.bibtex-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const bibtex = btn.getAttribute('data-bibtex');
+      if (bibtex && navigator.clipboard) {
+        navigator.clipboard.writeText(bibtex).then(() => {
+          showToast('BibTeX citation copied to clipboard!');
+        }).catch(() => {
+          showToast('Copied to clipboard!');
+        });
+      }
     });
   });
 
   // ==========================================
-  // 6. Contact Form Submission (Client Feedback)
+  // 8. Projects Filtering
+  // ==========================================
+  const projectFilters = document.querySelector('.project-filters:not(.pub-filters)');
+  if (projectFilters) {
+    const projectFilterBtns = projectFilters.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.projects-grid .project-card');
+
+    projectFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        projectFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filterValue = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filterValue === 'all' || category === filterValue) {
+            card.classList.remove('hide');
+            card.style.opacity = '0';
+            setTimeout(() => {
+              card.style.opacity = '1';
+            }, 50);
+          } else {
+            card.classList.add('hide');
+          }
+        });
+      });
+    });
+  }
+
+  // ==========================================
+  // 9. Contact Form Submission (Client Feedback)
   // ==========================================
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
@@ -167,13 +265,10 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const subjectInput = document.getElementById('subject');
-      const messageInput = document.getElementById('message');
-
+      
       // Simple visual feedback
       formStatus.className = 'form-status success';
-      formStatus.textContent = `Thank you, ${nameInput.value}! Your message has been sent successfully.`;
+      formStatus.textContent = `Thank you, ${nameInput ? nameInput.value : 'colleague'}! Your message has been sent successfully.`;
 
       // Reset form
       contactForm.reset();
@@ -187,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 7. Dynamic Footer Year
+  // 10. Dynamic Footer Year
   // ==========================================
   const currentYearSpan = document.getElementById('current-year');
   if (currentYearSpan) {
