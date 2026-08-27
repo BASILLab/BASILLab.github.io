@@ -792,6 +792,21 @@ a {
 .preview-gradient-3 {
   background: linear-gradient(135deg, #581c87 0%, #8b5cf6 100%);
 }
+.preview-gradient-neuro {
+  background: #090d16;
+}
+
+.project-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.5rem;
+  transition: transform var(--transition-base);
+}
+
+.project-card:hover .project-preview-img {
+  transform: scale(1.04);
+}
 
 .project-preview-icon {
   font-size: 4rem;
