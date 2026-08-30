@@ -112,7 +112,64 @@
             <div class="avatar-glow"></div>
             <div class="avatar-inner">
               <div class="avatar-icon">
-                <img src="assets/images/basil-lab-logo.png" alt="BASIL Lab Logo - Green Brain with Leaf Veins" class="basil-brain-img" />
+                <svg class="basil-brain-img" viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg" aria-label="BASIL Lab Logo">
+
+                  <!-- LEFT hemisphere -->
+                  <path d="
+                    M 100 22
+                    C 91 11, 74 6, 57 8
+                    C 40 10, 24 20, 14 34
+                    C 4 48, 6 66, 14 78
+                    C 6 90, 4 106, 12 118
+                    C 20 130, 36 140, 56 143
+                    C 70 146, 86 147, 100 144
+                    Z"
+                    fill="#1c9c3a" stroke="#0b4d1a" stroke-width="6"
+                    stroke-linejoin="round" stroke-linecap="round"/>
+
+                  <!-- RIGHT hemisphere -->
+                  <path d="
+                    M 100 22
+                    C 109 11, 126 6, 143 8
+                    C 160 10, 176 20, 186 34
+                    C 196 48, 194 66, 186 78
+                    C 194 90, 196 106, 188 118
+                    C 180 130, 164 140, 144 143
+                    C 130 146, 114 147, 100 144
+                    Z"
+                    fill="#22a845" stroke="#0b4d1a" stroke-width="6"
+                    stroke-linejoin="round" stroke-linecap="round"/>
+
+                  <!-- CENTER VERTICAL GROOVE (the midrib) -->
+                  <line x1="100" y1="22" x2="100" y2="144"
+                        stroke="#0b4d1a" stroke-width="5" stroke-linecap="round"/>
+
+                  <!-- ══ LEFT hemisphere veins ══ -->
+                  <!-- Each vein STARTS at center groove (x≈100) and curves LEFT -->
+                  <!-- Upper left vein -->
+                  <path d="M 98 52  C 80 51, 58 50, 24 47"
+                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Middle left vein -->
+                  <path d="M 98 84  C 78 83, 54 82, 16 80"
+                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Lower left vein -->
+                  <path d="M 98 116 C 80 117, 58 119, 26 124"
+                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+
+                  <!-- ══ RIGHT hemisphere veins ══ -->
+                  <!-- Each vein STARTS at center groove (x≈102) and curves RIGHT -->
+                  <!-- Upper right vein -->
+                  <path d="M 102 52  C 120 51, 142 50, 176 47"
+                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Middle right vein -->
+                  <path d="M 102 84  C 122 83, 146 82, 184 80"
+                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Lower right vein -->
+                  <path d="M 102 116 C 120 117, 142 119, 174 124"
+                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+
+                </svg>
+              </div>
               </div>
             </div>
           </div>
