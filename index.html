@@ -112,61 +112,57 @@
             <div class="avatar-glow"></div>
             <div class="avatar-inner">
               <div class="avatar-icon">
-                <svg class="basil-brain-img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="BASIL Lab Logo">
-                  <defs>
-                    <!-- Left Hemisphere Gradient -->
-                    <linearGradient id="brainGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#4ade80" />
-                      <stop offset="45%" stop-color="#10b981" />
-                      <stop offset="100%" stop-color="#059669" />
-                    </linearGradient>
-                    <!-- Right Hemisphere Gradient -->
-                    <linearGradient id="brainGradRight" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#86efac" />
-                      <stop offset="50%" stop-color="#22c55e" />
-                      <stop offset="100%" stop-color="#16a34a" />
-                    </linearGradient>
-                  </defs>
+                <svg class="basil-brain-img" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-label="BASIL Lab Logo">
+                  <!-- LEFT Hemisphere (Connected seamlessly at center line x=120) -->
+                  <path d="
+                    M 120 25
+                    C 90 14, 52 18, 38 42
+                    C 28 60, 34 76, 44 82
+                    C 26 92, 18 114, 22 134
+                    C 26 150, 40 160, 52 162
+                    C 38 174, 44 194, 64 206
+                    C 84 218, 110 216, 120 205
+                    Z"
+                    fill="#22c55e"
+                    stroke="#064e3b"
+                    stroke-width="5.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
 
-                  <!-- ═══ LEFT HEMISPHERE (Authentic Brain Geometry) ═══ -->
-                  <path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 52.3-64.8C75.2 119.5 72 108.6 72 96c0-35.3 28.7-64 64-64c5.6 0 11.1 .7 16.3 2.1C155.3 21.9 179.1 0 208 0z"
-                        fill="url(#brainGradLeft)"
-                        stroke="#064e3b"
-                        stroke-width="16"
-                        stroke-linejoin="round"/>
+                  <!-- RIGHT Hemisphere (Connected seamlessly at center line x=120) -->
+                  <path d="
+                    M 120 25
+                    C 150 14, 188 18, 202 42
+                    C 212 60, 206 76, 196 82
+                    C 214 92, 222 114, 218 134
+                    C 214 150, 200 160, 188 162
+                    C 202 174, 196 194, 176 206
+                    C 156 218, 130 216, 120 205
+                    Z"
+                    fill="#22c55e"
+                    stroke="#064e3b"
+                    stroke-width="5.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
 
-                  <!-- ═══ RIGHT HEMISPHERE (Authentic Brain Geometry) ═══ -->
-                  <path d="M328 0c28.9 0 52.7 21.9 55.7 50.1c5.2-1.4 10.7-2.1 16.3-2.1c35.3 0 64 28.7 64 64c0 12.6-3.2 23.5-8.3 33.2C458.4 135.7 480 161.3 480 192c0 15-4.1 28.8-11.2 40.8c27.1 12.8 45.8 40.4 45.8 72.3c0 34.2-21.4 63.4-51.6 75.1c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"
-                        fill="url(#brainGradRight)"
-                        stroke="#064e3b"
-                        stroke-width="16"
-                        stroke-linejoin="round"/>
+                  <!-- Center Midrib Groove (dividing line down center) -->
+                  <line x1="120" y1="25" x2="120" y2="205" stroke="#064e3b" stroke-width="5.5" stroke-linecap="round"/>
 
-                  <!-- ═══ LEFT LEAF VEINS (Bounded Inside Left Lobe) ═══ -->
+                  <!-- ═══ LEFT VEINS (Single strokes, curving UPWARD and outward) ═══ -->
                   <!-- Upper Vein -->
-                  <path d="M 240 100 C 190 85, 150 75, 115 88" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M 170 82 C 145 64, 125 60, 110 64" fill="none" stroke="#064e3b" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M 120 75 C 95 62, 70 52, 46 56" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
                   <!-- Middle Vein -->
-                  <path d="M 240 215 C 180 195, 120 195, 68 220" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M 155 202 C 115 174, 85 174, 65 186" fill="none" stroke="#064e3b" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M 120 125 C 90 110, 62 108, 36 120" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
                   <!-- Lower Vein -->
-                  <path d="M 240 335 C 185 330, 135 355, 88 395" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M 160 335 C 125 320, 100 320, 80 330" fill="none" stroke="#064e3b" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M 120 175 C 95 160, 72 162, 54 178" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
 
-                  <!-- ═══ RIGHT LEAF VEINS (Bounded Inside Right Lobe) ═══ -->
+                  <!-- ═══ RIGHT VEINS (Single strokes, curving UPWARD and outward) ═══ -->
                   <!-- Upper Vein -->
-                  <path d="M 272 100 C 322 85, 362 75, 397 88" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M 342 82 C 367 64, 387 60, 402 64" fill="none" stroke="#064e3b" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M 120 75 C 145 62, 170 52, 194 56" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
                   <!-- Middle Vein -->
-                  <path d="M 272 215 C 332 195, 392 195, 444 220" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M 357 202 C 397 174, 427 174, 447 186" fill="none" stroke="#064e3b" stroke-width="12" stroke-linecap="round"/>
+                  <path d="M 120 125 C 150 110, 178 108, 204 120" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
                   <!-- Lower Vein -->
-                  <path d="M 272 335 C 327 330, 377 355, 424 395" fill="none" stroke="#064e3b" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M 352 335 C 387 320, 412 320, 432 330" fill="none" stroke="#064e3b" stroke-width="12" stroke-linecap="round"/>
-
-                  <!-- Glossy Modern Highlights on Top Lobes -->
-                  <ellipse cx="140" cy="70" rx="34" ry="16" transform="rotate(-25 140 70)" fill="#ffffff" opacity="0.35"/>
-                  <ellipse cx="372" cy="70" rx="34" ry="16" transform="rotate(25 372 70)" fill="#ffffff" opacity="0.35"/>
+                  <path d="M 120 175 C 145 160, 168 162, 186 178" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
                 </svg>
               </div>
             </div>
