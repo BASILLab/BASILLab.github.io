@@ -112,64 +112,87 @@
             <div class="avatar-glow"></div>
             <div class="avatar-inner">
               <div class="avatar-icon">
-                <svg class="basil-brain-img" viewBox="0 0 200 175" xmlns="http://www.w3.org/2000/svg" aria-label="BASIL Lab Logo">
+                <svg class="basil-brain-img" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-label="BASIL Lab Logo">
+                  <defs>
+                    <linearGradient id="basilGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#4ade80" />
+                      <stop offset="45%" stop-color="#10b981" />
+                      <stop offset="100%" stop-color="#059669" />
+                    </linearGradient>
+                    <linearGradient id="basilGradRight" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#86efac" />
+                      <stop offset="45%" stop-color="#22c55e" />
+                      <stop offset="100%" stop-color="#16a34a" />
+                    </linearGradient>
+                  </defs>
 
-                  <!-- LEFT hemisphere -->
+                  <!-- Cute Basil Stem at Bottom -->
+                  <path d="M 100 166 C 100 178, 97 186, 92 192" fill="none" stroke="#064e3b" stroke-width="4.5" stroke-linecap="round"/>
+
+                  <!-- LEFT Hemisphere (Cloud-like brain lobes) -->
                   <path d="
-                    M 100 22
-                    C 91 11, 74 6, 57 8
-                    C 40 10, 24 20, 14 34
-                    C 4 48, 6 66, 14 78
-                    C 6 90, 4 106, 12 118
-                    C 20 130, 36 140, 56 143
-                    C 70 146, 86 147, 100 144
+                    M 100 24
+                    C 86 14, 62 14, 52 28
+                    C 42 40, 42 54, 48 64
+                    C 34 70, 18 84, 20 104
+                    C 22 120, 38 130, 50 130
+                    C 38 138, 38 154, 52 164
+                    C 64 173, 84 173, 96 168
+                    C 99 166, 100 167, 100 168
                     Z"
-                    fill="#1c9c3a" stroke="#0b4d1a" stroke-width="6"
+                    fill="url(#basilGradLeft)" stroke="#064e3b" stroke-width="4.5"
                     stroke-linejoin="round" stroke-linecap="round"/>
 
-                  <!-- RIGHT hemisphere -->
+                  <!-- RIGHT Hemisphere (Cloud-like brain lobes) -->
                   <path d="
-                    M 100 22
-                    C 109 11, 126 6, 143 8
-                    C 160 10, 176 20, 186 34
-                    C 196 48, 194 66, 186 78
-                    C 194 90, 196 106, 188 118
-                    C 180 130, 164 140, 144 143
-                    C 130 146, 114 147, 100 144
+                    M 100 24
+                    C 114 14, 138 14, 148 28
+                    C 158 40, 158 54, 152 64
+                    C 166 70, 182 84, 180 104
+                    C 178 120, 162 130, 150 130
+                    C 162 138, 162 154, 148 164
+                    C 136 173, 116 173, 104 168
+                    C 101 166, 100 167, 100 168
                     Z"
-                    fill="#22a845" stroke="#0b4d1a" stroke-width="6"
+                    fill="url(#basilGradRight)" stroke="#064e3b" stroke-width="4.5"
                     stroke-linejoin="round" stroke-linecap="round"/>
 
-                  <!-- CENTER VERTICAL GROOVE (the midrib) -->
-                  <line x1="100" y1="22" x2="100" y2="144"
-                        stroke="#0b4d1a" stroke-width="5" stroke-linecap="round"/>
+                  <!-- Center Midrib Groove (dividing hemispheres & leaf spine) -->
+                  <line x1="100" y1="24" x2="100" y2="168" stroke="#064e3b" stroke-width="4" stroke-linecap="round"/>
 
-                  <!-- ══ LEFT hemisphere veins ══ -->
-                  <!-- Each vein STARTS at center groove (x≈100) and curves LEFT -->
-                  <!-- Upper left vein -->
-                  <path d="M 98 52  C 80 51, 58 50, 24 47"
-                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
-                  <!-- Middle left vein -->
-                  <path d="M 98 84  C 78 83, 54 82, 16 80"
-                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
-                  <!-- Lower left vein -->
-                  <path d="M 98 116 C 80 117, 58 119, 26 124"
-                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Brain Gyri / Sulci inner creases (cloud folds) -->
+                  <path d="M 48 64 C 58 68, 68 70, 76 66" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+                  <path d="M 50 130 C 60 128, 70 124, 80 126" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+                  <path d="M 152 64 C 142 68, 132 70, 124 66" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
+                  <path d="M 150 130 C 140 128, 130 124, 120 126" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round" opacity="0.65"/>
 
-                  <!-- ══ RIGHT hemisphere veins ══ -->
-                  <!-- Each vein STARTS at center groove (x≈102) and curves RIGHT -->
-                  <!-- Upper right vein -->
-                  <path d="M 102 52  C 120 51, 142 50, 176 47"
-                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
-                  <!-- Middle right vein -->
-                  <path d="M 102 84  C 122 83, 146 82, 184 80"
-                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
-                  <!-- Lower right vein -->
-                  <path d="M 102 116 C 120 117, 142 119, 174 124"
-                        fill="none" stroke="#0b4d1a" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Leaf Veins branching organically from the center midrib -->
+                  <!-- Upper Vein Pair -->
+                  <path d="M 100 46 C 84 40, 68 34, 56 38" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M 82 41 C 74 33, 64 30, 58 32" fill="none" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M 100 46 C 116 40, 132 34, 144 38" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M 118 41 C 126 33, 136 30, 142 32" fill="none" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
 
+                  <!-- Mid-Upper Vein Pair -->
+                  <path d="M 100 80 C 76 74, 50 72, 32 82" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M 72 75 C 58 64, 44 62, 36 66" fill="none" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M 100 80 C 124 74, 150 72, 168 82" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M 128 75 C 142 64, 156 62, 164 66" fill="none" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
+
+                  <!-- Mid-Lower Vein Pair -->
+                  <path d="M 100 116 C 76 112, 52 118, 34 130" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M 70 113 C 54 105, 42 105, 36 110" fill="none" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M 100 116 C 124 112, 148 118, 166 130" fill="none" stroke="#064e3b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M 130 113 C 146 105, 158 105, 164 110" fill="none" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
+
+                  <!-- Lower Vein Pair -->
+                  <path d="M 100 144 C 84 148, 68 156, 56 162" fill="none" stroke="#064e3b" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M 100 144 C 116 148, 132 156, 144 162" fill="none" stroke="#064e3b" stroke-width="2.2" stroke-linecap="round"/>
+
+                  <!-- Glossy Kitsch Highlights on top lobes -->
+                  <ellipse cx="64" cy="36" rx="14" ry="7" transform="rotate(-25 64 36)" fill="#ffffff" opacity="0.35" />
+                  <ellipse cx="136" cy="36" rx="14" ry="7" transform="rotate(25 136 36)" fill="#ffffff" opacity="0.35" />
                 </svg>
-              </div>
               </div>
             </div>
           </div>
@@ -261,7 +284,7 @@
               <div class="team-bio">
                 <p>
                   Prof. Kyeonggu Lee received his B.S. (2019), M.S. (2021), and Ph.D. (2024) in Electronic &amp; Biomedical Engineering from <strong>Hanyang University, Seoul</strong>, under the supervision of Prof. Chang-Hwan Im.
-                  Following his doctorate, he conducted postdoctoral research at <strong>Hanyang University</strong> (Sep. 2024 – Feb. 2026) and as a visiting researcher at <strong>CHU Sainte-Justine &amp; Université de Montréal</strong> (Mar. – Sep. 2026), working with Prof. Karim Jerbi and Prof. Anne Gallagher.
+                  Following his doctorate, he conducted postdoctoral research at <strong>Hanyang University</strong> (Sep. 2024 – Feb. 2026) and as a postdoctoral researcher at <strong>CHU Sainte-Justine &amp; Université de Montréal</strong> (Mar. – Sep. 2026), under the supervision of Prof. Karim Jerbi and Prof. Anne Gallagher.
                 </p>
                 <p>
                   He is now an <strong>Assistant Professor</strong> in the Department of Biomedical Engineering at <strong>Pusan National University</strong>, where he leads BASIL Lab. His research spans deep learning for biomedical signals, brain-computer interfaces (EEG, fNIRS, MEG), and AI-driven clinical diagnostics.
@@ -983,10 +1006,10 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date">Mar. 2026 – Sep. 2026</span>
-              <h3 class="timeline-title">Visiting Researcher</h3>
+              <h3 class="timeline-title">Postdoctoral Researcher</h3>
               <h4 class="timeline-subtitle">CHU Sainte-Justine &amp; Université de Montréal &bull; Montréal, QC, Canada</h4>
               <p class="timeline-desc">
-                Conducted collaborative research on pediatric neuroimaging and biomedical signal intelligence. Supervised by Prof. Karim Jerbi and Prof. Anne Gallagher.
+                Conducted postdoctoral research on pediatric neuroimaging and biomedical signal intelligence under the supervision of Prof. Karim Jerbi and Prof. Anne Gallagher.
               </p>
               <div class="timeline-tags">
                 <span>MEG Neuroimaging</span>
