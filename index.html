@@ -74,7 +74,7 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span class="badge-dot"></span>
-            <span><i class="fa-solid fa-building-columns"></i> Université de Montréal</span>
+            <span><i class="fa-solid fa-building-columns"></i> Pusan National University</span>
           </div>
           <h1 class="hero-title">
             Welcome to <span class="gradient-text">BASIL Lab</span>
@@ -88,7 +88,7 @@
 
           <div class="hero-actions">
             <a href="#publications" class="btn btn-primary">
-              <span>View Publications (129+ Citations)</span>
+              <span>View Publications</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
             <a href="#about" class="btn btn-secondary">
@@ -112,32 +112,40 @@
             <div class="avatar-glow"></div>
             <div class="avatar-inner">
               <div class="avatar-icon">
-                <!-- BASIL Lab custom brain+leaf SVG logo -->
-                <svg class="basil-brain-svg" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <!-- Left hemisphere -->
-                  <path d="M50 72 C50 72 22 68 18 52 C14 38 20 24 30 18 C36 14 44 14 50 20 Z" fill="#22c55e" opacity="0.9"/>
-                  <!-- Right hemisphere -->
-                  <path d="M50 72 C50 72 78 68 82 52 C86 38 80 24 70 18 C64 14 56 14 50 20 Z" fill="#16a34a" opacity="0.9"/>
-                  <!-- Center divider -->
-                  <line x1="50" y1="20" x2="50" y2="72" stroke="#15803d" stroke-width="1.5"/>
+                <!-- BASIL Lab: green brain + leaf-vein lines per hemisphere -->
+                <svg class="basil-brain-svg" viewBox="0 0 100 95" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <!-- Right hemisphere (viewer's left) -->
+                  <path d="M50 78
+                    C50 78 50 68 46 62
+                    C42 56 36 55 32 50
+                    C28 45 26 38 28 32
+                    C30 26 36 20 42 19
+                    C46 18 50 20 50 24
+                    Z"
+                    fill="#22c55e"/>
+                  <!-- Left hemisphere (viewer's right) -->
+                  <path d="M50 78
+                    C50 78 50 68 54 62
+                    C58 56 64 55 68 50
+                    C72 45 74 38 72 32
+                    C70 26 64 20 58 19
+                    C54 18 50 20 50 24
+                    Z"
+                    fill="#16a34a"/>
                   <!-- Brain stem -->
-                  <rect x="45" y="72" width="10" height="8" rx="4" fill="#22c55e"/>
-                  <!-- Left hemisphere wrinkles -->
-                  <path d="M28 38 Q34 32 38 40" fill="none" stroke="#15803d" stroke-width="1.2" stroke-linecap="round"/>
-                  <path d="M26 50 Q33 44 36 52" fill="none" stroke="#15803d" stroke-width="1.2" stroke-linecap="round"/>
-                  <path d="M30 60 Q37 56 38 63" fill="none" stroke="#15803d" stroke-width="1.2" stroke-linecap="round"/>
-                  <!-- Right hemisphere wrinkles -->
-                  <path d="M72 38 Q66 32 62 40" fill="none" stroke="#14532d" stroke-width="1.2" stroke-linecap="round"/>
-                  <path d="M74 50 Q67 44 64 52" fill="none" stroke="#14532d" stroke-width="1.2" stroke-linecap="round"/>
-                  <path d="M70 60 Q63 56 62 63" fill="none" stroke="#14532d" stroke-width="1.2" stroke-linecap="round"/>
-                  <!-- Left leaf stem rising diagonally up-left -->
-                  <line x1="34" y1="18" x2="18" y2="2" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round"/>
-                  <!-- Left leaf shape -->
-                  <ellipse cx="14" cy="4" rx="8" ry="4" fill="#4ade80" opacity="0.85" transform="rotate(-40 14 4)"/>
-                  <!-- Right leaf stem rising diagonally up-right -->
-                  <line x1="66" y1="18" x2="82" y2="2" stroke="#4ade80" stroke-width="1.8" stroke-linecap="round"/>
-                  <!-- Right leaf shape -->
-                  <ellipse cx="86" cy="4" rx="8" ry="4" fill="#4ade80" opacity="0.85" transform="rotate(40 86 4)"/>
+                  <rect x="46" y="78" width="8" height="9" rx="4" fill="#22c55e"/>
+                  <!-- Center groove -->
+                  <line x1="50" y1="24" x2="50" y2="78" stroke="#15803d" stroke-width="1.5"/>
+
+                  <!-- Right hemisphere: 3 leaf-vein / sulcus lines -->
+                  <path d="M33 30 Q28 37 31 45" fill="none" stroke="#15803d" stroke-width="1.4" stroke-linecap="round"/>
+                  <path d="M35 44 Q29 50 32 58" fill="none" stroke="#15803d" stroke-width="1.4" stroke-linecap="round"/>
+                  <path d="M38 58 Q33 64 36 70" fill="none" stroke="#15803d" stroke-width="1.4" stroke-linecap="round"/>
+
+                  <!-- Left hemisphere: 3 leaf-vein / sulcus lines -->
+                  <path d="M67 30 Q72 37 69 45" fill="none" stroke="#14532d" stroke-width="1.4" stroke-linecap="round"/>
+                  <path d="M65 44 Q71 50 68 58" fill="none" stroke="#14532d" stroke-width="1.4" stroke-linecap="round"/>
+                  <path d="M62 58 Q67 64 64 70" fill="none" stroke="#14532d" stroke-width="1.4" stroke-linecap="round"/>
                 </svg>
               </div>
               <div class="avatar-badge avatar-badge-1">
@@ -149,8 +157,8 @@
                 <span>Deep Learning & AI</span>
               </div>
               <div class="avatar-badge avatar-badge-3">
-                <i class="fa-solid fa-chart-line"></i>
-                <span>129+ Citations</span>
+                <i class="fa-solid fa-wave-square"></i>
+                <span>Biomedical Signals</span>
               </div>
             </div>
           </div>
@@ -162,26 +170,22 @@
     <section class="about section" id="about">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">// 01. About Me</span>
-          <h2 class="section-title">Bridging AI & Computational Neuroscience</h2>
-          <p class="section-subtitle">Advancing translational neuroengineering, brain-computer interfaces, and clinical neurodiagnostics.</p>
+          <span class="section-tag">// 01. The Lab</span>
+          <h2 class="section-title">Bridging AI & Biomedical Signals</h2>
+          <p class="section-subtitle">Advancing translational signal intelligence, brain-computer interfaces, and clinical biomarker discovery.</p>
         </div>
 
         <div class="about-grid">
           <div class="about-card main-about">
             <h3>Hello & Welcome! 🧠</h3>
             <p>
-              I am a researcher affiliated with <strong>Université de Montréal</strong>, dedicated to pioneering intelligent technologies that bridge human neurophysiology and modern artificial intelligence.
+              <strong>BASIL Lab</strong> (Biomedical AI for SIgnaLs Laboratory) is led by <strong>Prof. Kyeonggu Lee</strong> at the <strong>Department of Biomedical Engineering, Pusan National University</strong>. Our mission is to pioneer intelligent technologies that bridge human neurophysiology and modern artificial intelligence.
             </p>
             <p>
-              My research focuses on developing novel deep learning architectures for neuroimaging and biosignals (fNIRS, EEG, MEG), optimizing wearable neurotechnology for early disease diagnosis (such as Mild Cognitive Impairment and Major Depressive Disorder), and engineering robust Brain-Computer Interface (BCI) systems.
+              Our research focuses on developing novel deep learning architectures for neuroimaging and biosignals (fNIRS, EEG, MEG), optimizing wearable neurotechnology for early disease diagnosis (such as Mild Cognitive Impairment and Major Depressive Disorder), and engineering robust Brain-Computer Interface (BCI) systems.
             </p>
 
             <div class="about-stats">
-              <div class="stat-card">
-                <span class="stat-number">129+</span>
-                <span class="stat-label">Citations</span>
-              </div>
               <div class="stat-card">
                 <span class="stat-number">8</span>
                 <span class="stat-label">Publications</span>
@@ -218,6 +222,60 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="about section" id="team">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// 02. The Team</span>
+          <h2 class="section-title">Meet the Team</h2>
+          <p class="section-subtitle">The people behind BASIL Lab's research in biomedical AI and signal intelligence.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- PI Card -->
+          <div class="team-card pi-card">
+            <div class="team-photo-wrap">
+              <img src="assets/images/kyeonggu-lee.jpg" alt="Prof. Kyeonggu Lee" class="team-photo" />
+            </div>
+            <div class="team-info">
+              <span class="team-role-badge">Principal Investigator</span>
+              <h3 class="team-name">Kyeonggu Lee, Ph.D.</h3>
+              <p class="team-affil"><i class="fa-solid fa-building-columns"></i> Department of Biomedical Engineering<br>Pusan National University</p>
+
+              <div class="team-bio">
+                <p>
+                  Prof. Kyeonggu Lee received his B.S. (2019), M.S. (2021), and Ph.D. (2024) in Electronic &amp; Biomedical Engineering from <strong>Hanyang University, Seoul</strong>, under the supervision of Prof. Chang-Hwan Im.
+                  Following his doctorate, he conducted postdoctoral research at <strong>Hanyang University</strong> (Sep. 2024 – Feb. 2026) and as a visiting researcher at <strong>CHU Sainte-Justine &amp; Université de Montréal</strong> (Mar. – Sep. 2026), working with Prof. Karim Jerbi and Prof. Anne Gallagher.
+                </p>
+                <p>
+                  He is now an <strong>Assistant Professor</strong> in the Department of Biomedical Engineering at <strong>Pusan National University</strong>, where he leads BASIL Lab. His research spans deep learning for biomedical signals, brain-computer interfaces (EEG, fNIRS, MEG), and AI-driven clinical diagnostics.
+                </p>
+              </div>
+
+              <div class="team-links">
+                <a href="https://scholar.google.co.kr/citations?user=sEDUmfAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="team-link" title="Google Scholar">
+                  <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+                </a>
+                <a href="https://github.com/KyeongguLee" target="_blank" rel="noopener noreferrer" class="team-link" title="GitHub">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder: Future members -->
+          <div class="team-card join-card">
+            <div class="join-icon"><i class="fa-solid fa-user-plus"></i></div>
+            <h3>Join Us!</h3>
+            <p>We are looking for motivated <strong>graduate students</strong> and <strong>postdoctoral researchers</strong> passionate about AI, biomedical signals, and neurotechnology.</p>
+            <a href="#contact" class="btn btn-primary" style="margin-top:1rem; font-size:0.9rem;">
+              <span>Get in Touch</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -313,11 +371,11 @@
           <p class="section-subtitle">Peer-reviewed journal articles, preprints, and research contributions across neural engineering and AI.</p>
         </div>
 
-        <!-- Citation Metrics Summary -->
+        <!-- Publication Metrics Summary -->
         <div class="pub-summary-bar">
           <a href="https://scholar.google.co.kr/citations?user=sEDUmfAAAAAJ&hl=en&cstart=0&pagesize=100" target="_blank" rel="noopener noreferrer" class="pub-stat-card pub-stat-card-link" title="View Google Scholar Profile">
-            <span class="pub-stat-val">129+ <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.95rem; vertical-align: middle; margin-left: 4px;"></i></span>
-            <span class="pub-stat-label">Google Scholar Citations</span>
+            <span class="pub-stat-val"><i class="fa-solid fa-graduation-cap" style="font-size:1.1rem; vertical-align:middle;"></i> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.95rem; vertical-align: middle; margin-left: 4px;"></i></span>
+            <span class="pub-stat-label">Google Scholar</span>
           </a>
           <div class="pub-stat-card">
             <span class="pub-stat-val">8</span>
@@ -884,65 +942,115 @@
     <section class="experience section" id="experience">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">// 06. Academic Journey</span>
+          <span class="section-tag">// Career &amp; Academic Journey</span>
           <h2 class="section-title">Research &amp; Affiliations</h2>
           <p class="section-subtitle">Academic milestones, research appointments, and collaborative initiatives.</p>
         </div>
 
         <div class="timeline">
-          <!-- Timeline Item 1 -->
+          <!-- Timeline Item 1: PNU (Current) -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Current</span>
-              <h3 class="timeline-title">Researcher in Computational Neuroscience &amp; AI</h3>
-              <h4 class="timeline-subtitle">Université de Montréal &bull; Montreal, QC, Canada</h4>
+              <span class="timeline-date">Sep. 2026 – Present</span>
+              <h3 class="timeline-title">Assistant Professor</h3>
+              <h4 class="timeline-subtitle">Department of Biomedical Engineering &bull; Pusan National University, Busan, Republic of Korea</h4>
               <p class="timeline-desc">
-                Conducting advanced research on brain-computer interfaces, deep learning architectures for neuroimaging signals (fNIRS, EEG, MEG), and computer-aided diagnostics for neuropsychiatric and neurodegenerative conditions.
+                Leading the BASIL Lab (Biomedical AI for SIgnaLs Laboratory), directing research on AI-driven biomedical signal analysis, brain-computer interfaces, and clinical neurodiagnostic systems.
               </p>
               <div class="timeline-tags">
-                <span>Computational Neuroscience</span>
-                <span>Deep Learning</span>
+                <span>Biomedical AI</span>
                 <span>BCI</span>
-                <span>fNIRS / EEG / MEG</span>
+                <span>EEG / fNIRS / MEG</span>
+                <span>Clinical Diagnostics</span>
               </div>
             </div>
           </div>
 
-          <!-- Timeline Item 2 -->
+          <!-- Timeline Item 2: CHU Sainte-Justine / UdeM -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Research Collaboration</span>
-              <h3 class="timeline-title">Neural Engineering &amp; Neurodiagnostics Research</h3>
-              <h4 class="timeline-subtitle">Computational Neuroengineering &amp; Clinical Partners</h4>
+              <span class="timeline-date">Mar. 2026 – Sep. 2026</span>
+              <h3 class="timeline-title">Visiting Researcher</h3>
+              <h4 class="timeline-subtitle">CHU Sainte-Justine &amp; Université de Montréal &bull; Montréal, QC, Canada</h4>
               <p class="timeline-desc">
-                Pioneered machine learning frameworks for photobiomodulation (tPBM) response forecasting (IEEE TNSRE), channel-embedding CNNs for Major Depressive Disorder (Depression and Anxiety), and wearable EEG configurations for MCI screening (Alzheimer's Research &amp; Therapy).
+                Conducted collaborative research on pediatric neuroimaging and biomedical signal intelligence. Supervised by Prof. Karim Jerbi and Prof. Anne Gallagher.
               </p>
               <div class="timeline-tags">
-                <span>IEEE TNSRE</span>
-                <span>Alzheimer's Res &amp; Ther</span>
-                <span>XAI</span>
-                <span>Clinical Biomarkers</span>
+                <span>MEG Neuroimaging</span>
+                <span>Pediatric Neuroscience</span>
+                <span>Karim Jerbi Lab</span>
+                <span>Anne Gallagher Lab</span>
               </div>
             </div>
           </div>
 
-          <!-- Timeline Item 3 -->
+          <!-- Timeline Item 3: Hanyang Postdoc -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
-              <span class="timeline-date">Core Foundations</span>
-              <h3 class="timeline-title">Brain-Computer Interface &amp; Neural Signal Processing</h3>
-              <h4 class="timeline-subtitle">Biomedical Engineering &amp; Computer Science</h4>
+              <span class="timeline-date">Sep. 2024 – Feb. 2026</span>
+              <h3 class="timeline-title">Postdoctoral Researcher</h3>
+              <h4 class="timeline-subtitle">Department of Electronic Engineering &bull; Hanyang University, Seoul, Republic of Korea</h4>
               <p class="timeline-desc">
-                Developed SSVEP-based BCI and EOG eye-tracking systems for AR-based assistive living (IEEE TNSRE 2022) with over 54 citations.
+                Postdoctoral research on deep learning for fNIRS-based computer-aided diagnosis, multimodal neural signal processing, and tPBM neuromodulation. Advisor: Prof. Chang-Hwan Im.
               </p>
               <div class="timeline-tags">
-                <span>SSVEP BCI</span>
-                <span>EOG</span>
-                <span>Augmented Reality</span>
-                <span>Biomedical Signal Processing</span>
+                <span>fNIRS CADx</span>
+                <span>Deep Learning</span>
+                <span>tPBM</span>
+                <span>Chang-Hwan Im Lab</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Ph.D. -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Aug. 2024</span>
+              <h3 class="timeline-title">Ph.D. in Electronic Engineering</h3>
+              <h4 class="timeline-subtitle">Hanyang University, Seoul, Republic of Korea &bull; Advisor: Prof. Chang-Hwan Im</h4>
+              <p class="timeline-desc">
+                Doctoral dissertation on AI-driven diagnosis of neuropsychiatric and neurodegenerative disorders using functional near-infrared spectroscopy and deep learning.
+              </p>
+              <div class="timeline-tags">
+                <span>Ph.D.</span>
+                <span>fNIRS</span>
+                <span>MDD / MCI</span>
+                <span>Hanyang University</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5: M.S. -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Feb. 2021</span>
+              <h3 class="timeline-title">M.S. in Electronic Engineering</h3>
+              <h4 class="timeline-subtitle">Hanyang University, Seoul, Republic of Korea &bull; Advisor: Prof. Chang-Hwan Im</h4>
+              <div class="timeline-tags">
+                <span>M.S.</span>
+                <span>BCI</span>
+                <span>EEG</span>
+                <span>Hanyang University</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 6: B.S. -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Feb. 2019</span>
+              <h3 class="timeline-title">B.S. in Biomedical Engineering</h3>
+              <h4 class="timeline-subtitle">Hanyang University, Seoul, Republic of Korea</h4>
+              <div class="timeline-tags">
+                <span>B.S.</span>
+                <span>Biomedical Engineering</span>
+                <span>Hanyang University</span>
               </div>
             </div>
           </div>
@@ -966,7 +1074,7 @@
               <div class="contact-icon"><i class="fa-solid fa-building-columns"></i></div>
               <div>
                 <h4>Affiliation</h4>
-                <span>Université de Montréal, Montreal, QC, Canada</span>
+                <span>Dept. of Biomedical Engineering, Pusan National University, Busan, Republic of Korea</span>
               </div>
             </div>
 
@@ -974,7 +1082,7 @@
               <div class="contact-icon"><i class="fa-solid fa-graduation-cap"></i></div>
               <div>
                 <h4>Google Scholar</h4>
-                <a href="https://scholar.google.co.kr/citations?user=sEDUmfAAAAAJ&hl=en&cstart=0&pagesize=100" target="_blank" rel="noopener noreferrer">Kyeonggu Lee (129+ Citations)</a>
+                <a href="https://scholar.google.co.kr/citations?user=sEDUmfAAAAAJ&hl=en&cstart=0&pagesize=100" target="_blank" rel="noopener noreferrer">Kyeonggu Lee</a>
               </div>
             </div>
 
@@ -987,10 +1095,10 @@
             </div>
 
             <div class="contact-card">
-              <div class="contact-icon"><i class="fa-solid fa-brain"></i></div>
+              <div class="contact-icon"><i class="fa-solid fa-wave-square"></i></div>
               <div>
                 <h4>Research Fields</h4>
-                <span>AI &bull; BCI &bull; Computational Neuroscience &bull; Psychology</span>
+                <span>Biomedical AI &bull; BCI &bull; EEG / fNIRS / MEG &bull; Clinical Diagnostics</span>
               </div>
             </div>
           </div>
@@ -1012,7 +1120,7 @@
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Hello Kyeonggu, I came across your research on..." required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Hello Prof. Lee, I came across your research on..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-submit">
                 <span>Send Message</span>
@@ -1037,9 +1145,9 @@
     <div class="container footer-container">
       <div class="footer-left">
         <a href="#hero" class="footer-logo">
-          <span class="logo-bracket">&lt;</span><span class="logo-name">Kyeonggu Lee</span><span class="logo-bracket">/&gt;</span>
+          <span class="logo-name">BASIL Lab</span>
         </a>
-        <p class="footer-copy">© <span id="current-year"></span> Kyeonggu Lee &bull; Université de Montréal &bull; AI, BCI, Psychology &amp; Computational Neuroscience.</p>
+        <p class="footer-copy">© <span id="current-year"></span> BASIL Lab &bull; Pusan National University &bull; Biomedical AI for SIgnaLs.</p>
       </div>
 
       <div class="footer-right">
