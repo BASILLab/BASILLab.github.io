@@ -85,54 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => sectionObserver.observe(section));
 
   // ==========================================
-  // 4. Hero Subtitle Typewriter Effect
+  // 4. Toast Notification System
   // ==========================================
-  const typedTextSpan = document.getElementById('typed-text');
-  const textArray = [
-    'Biomedical Signal Intelligence',
-    'AI-Powered EEG & fNIRS Analysis',
-    'Brain-Computer Interfaces (BCI)',
-    'Deep Learning for Biosignals',
-    'Clinical Neurodiagnostics',
-    'Multimodal Neural Signal Processing'
-  ];
-  const typingDelay = 75;
-  const erasingDelay = 35;
-  const newTextDelay = 1800;
-  let textArrayIndex = 0;
-  let charIndex = 0;
-  let isErasing = false;
-
-  function type() {
-    if (!typedTextSpan) return;
-
-    const currentText = textArray[textArrayIndex];
-
-    if (!isErasing && charIndex < currentText.length) {
-      typedTextSpan.textContent += currentText.charAt(charIndex);
-      charIndex++;
-      setTimeout(type, typingDelay);
-    } else if (isErasing && charIndex > 0) {
-      typedTextSpan.textContent = currentText.substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(type, erasingDelay);
-    } else if (!isErasing && charIndex === currentText.length) {
-      isErasing = true;
-      setTimeout(type, newTextDelay);
-    } else if (isErasing && charIndex === 0) {
-      isErasing = false;
-      textArrayIndex = (textArrayIndex + 1) % textArray.length;
-      setTimeout(type, 400);
-    }
-  }
-
-  if (typedTextSpan) {
-    typedTextSpan.textContent = '';
-    setTimeout(type, 600);
-  }
-
-  // ==========================================
-  // 5. Toast Notification System
   // ==========================================
   const toastMsg = document.getElementById('toast-msg');
   const toastText = document.getElementById('toast-text');

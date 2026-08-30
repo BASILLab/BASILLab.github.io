@@ -433,19 +433,6 @@ a {
   margin-bottom: 1.25rem;
 }
 
-.typed-highlight {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  border-right: 2px solid var(--primary);
-  animation: blink 0.75s step-end infinite;
-}
-
-@keyframes blink {
-  from, to { border-color: transparent; }
-  50% { border-color: var(--primary); }
-}
 
 .hero-description {
   font-size: 1.1rem;
