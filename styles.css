@@ -521,7 +521,7 @@ a {
 .basil-leaf-img {
   width: 220px;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-md);
   filter: drop-shadow(0 6px 20px rgba(16, 185, 129, 0.35));
   transition: transform var(--transition-base), filter var(--transition-base);
