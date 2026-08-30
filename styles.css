@@ -528,10 +528,10 @@ a {
 }
 
 .basil-brain-img {
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
-  filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.45));
+  filter: drop-shadow(0 0 14px rgba(34, 197, 94, 0.5));
 }
 
 .avatar-badge {
