@@ -532,8 +532,8 @@ a {
 }
 
 .basil-brain-img {
-  width: 175px;
-  height: 195px;
+  width: 180px;
+  height: 180px;
   filter: drop-shadow(0 6px 20px rgba(16, 185, 129, 0.45));
   transition: transform var(--transition-base), filter var(--transition-base);
 }
