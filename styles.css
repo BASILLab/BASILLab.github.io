@@ -518,16 +518,18 @@ a {
   justify-content: center;
 }
 
-.basil-brain-img {
-  width: 180px;
-  height: 180px;
-  filter: drop-shadow(0 6px 20px rgba(16, 185, 129, 0.45));
+.basil-leaf-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  filter: drop-shadow(0 6px 20px rgba(16, 185, 129, 0.35));
   transition: transform var(--transition-base), filter var(--transition-base);
 }
 
-.avatar-card:hover .basil-brain-img {
-  transform: scale(1.04) translateY(-2px);
-  filter: drop-shadow(0 8px 26px rgba(34, 197, 94, 0.65));
+.avatar-card:hover .basil-leaf-img {
+  transform: scale(1.05) rotate(-1deg);
+  filter: drop-shadow(0 10px 28px rgba(34, 197, 94, 0.55));
 }
 
 .avatar-badge {
