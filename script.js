@@ -89,12 +89,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const typedTextSpan = document.getElementById('typed-text');
   const textArray = [
+    'Biomedical Signal Intelligence',
+    'AI-Powered EEG & fNIRS Analysis',
     'Brain-Computer Interfaces (BCI)',
-    'Artificial Intelligence & Deep Learning',
-    'Computational Neuroscience',
-    'EEG, fNIRS & MEG Neuroimaging',
-    'Photobiomodulation & Neuromodulation',
-    'Psychiatric & Cognitive Diagnostics'
+    'Deep Learning for Biosignals',
+    'Clinical Neurodiagnostics',
+    'Multimodal Neural Signal Processing'
   ];
   const typingDelay = 75;
   const erasingDelay = 35;
