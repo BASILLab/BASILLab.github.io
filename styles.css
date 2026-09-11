@@ -817,6 +817,12 @@ a {
   background: #090d16;
 }
 
+.preview-white {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  height: 210px;
+}
+
 .project-preview-img {
   width: 100%;
   height: 100%;

@@ -43,7 +43,7 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="#hero" class="nav-link">The Lab</a></li>
           <li class="nav-item"><a href="#team" class="nav-link">The Team</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Our Projects</a></li>
+          <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
           <li class="nav-item"><a href="#news" class="nav-link">In the News</a></li>
           <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contacts</a></li>
@@ -148,171 +148,99 @@
       </div>
     </section>
 
-    <!-- Research Projects Section -->
-    <section class="projects section" id="projects">
+    <!-- Research Section -->
+    <section class="projects section" id="research">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">// 02. Our Projects</span>
-          <h2 class="section-title">Research Pipelines &amp; Systems</h2>
-          <p class="section-subtitle">Translational computational platforms, BCI prototypes, and neuroimaging analysis pipelines.</p>
-        </div>
-
-        <!-- Filter Controls -->
-        <div class="project-filters">
-          <button class="filter-btn active" data-filter="all">All Systems</button>
-          <button class="filter-btn" data-filter="neuroimaging">Neuroimaging &amp; MEG</button>
-          <button class="filter-btn" data-filter="cadx">Deep Learning CADx</button>
-          <button class="filter-btn" data-filter="bci">BCI &amp; Wearables</button>
-          <button class="filter-btn" data-filter="neuromodulation">tPBM Neuromodulation</button>
+          <span class="section-tag">// 02. Research</span>
+          <h2 class="section-title">Core Research Areas</h2>
+          <p class="section-subtitle">Pioneering AI methodologies for biomedical signals, wearable neurotechnologies, and clinical translation.</p>
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1: MEG Brain Imaging & Cortical Mapping -->
-          <article class="project-card" data-category="neuroimaging">
-            <div class="project-preview preview-gradient-neuro">
-              <img src="assets/images/brain-imaging-meg.png" alt="MEGIN TRIUX neo MEG Brain Imaging Analysis" class="project-preview-img" />
-              <div class="project-links-overlay">
-                <a href="https://github.com/KyeongguLee" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="View Code" aria-label="View Source Code">
-                  <i class="fa-brands fa-github"></i>
-                </a>
-              </div>
+          <!-- Research 1: Usability Enhancement in EEG Foundation Models -->
+          <article class="project-card">
+            <div class="project-preview preview-white">
+              <img src="assets/images/research-foundation-model.png" alt="Usability Enhancement in EEG Foundation Models" class="project-preview-img" />
             </div>
             <div class="project-body">
               <div class="project-header">
-                <span class="project-badge">MEG Source Localization</span>
-                <div class="project-external-links">
-                  <a href="https://github.com/KyeongguLee" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                </div>
+                <span class="project-badge">EEG Foundation Models</span>
               </div>
-              <h3 class="project-title">MEG Brain Imaging &amp; Cortical Mapping</h3>
+              <h3 class="project-title">Usability Enhancement in EEG Foundation Models</h3>
               <p class="project-description">
-                Signal processing and neural source localization pipeline for MEGIN TRIUX™ neo magnetoencephalography (MEG) data, mapping multi-slice functional brain activity.
+                Advancing the adaptability and practical usability of EEG foundation models for diverse clinical and computational applications.
               </p>
               <div class="project-tech-stack">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">MNE-Python</span>
-                <span class="tech-tag">MEGIN TRIUX neo</span>
-                <span class="tech-tag">Source Reconstruction</span>
+                <span class="tech-tag">Foundation Models</span>
+                <span class="tech-tag">EEG Decoding</span>
+                <span class="tech-tag">BCI</span>
+                <span class="tech-tag">Clinical AI</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 2: fNIRS Deep Learning CADx for MDD -->
-          <article class="project-card" data-category="cadx">
-            <div class="project-preview preview-gradient-1">
-              <i class="fa-solid fa-network-wired project-preview-icon"></i>
-              <div class="project-links-overlay">
-                <a href="#publications" class="project-link-icon" title="View Publication" aria-label="View Publication">
-                  <i class="fa-solid fa-book-open"></i>
-                </a>
-              </div>
+          <!-- Research 2: Clinical Feature Identification via XAI -->
+          <article class="project-card">
+            <div class="project-preview preview-white">
+              <img src="assets/images/research-xai.png" alt="Clinical Feature Identification via XAI" class="project-preview-img" />
             </div>
             <div class="project-body">
               <div class="project-header">
-                <span class="project-badge">Deep Learning &amp; fNIRS</span>
-                <div class="project-external-links">
-                  <a href="#publications" aria-label="Publication"><i class="fa-solid fa-book-open"></i></a>
-                </div>
+                <span class="project-badge">Explainable AI</span>
               </div>
-              <h3 class="project-title">fNIRS-Based CNN Channel-Embedding CADx</h3>
+              <h3 class="project-title">Clinical Feature Identification via XAI</h3>
               <p class="project-description">
-                Novel convolutional neural network architecture with a channel-embedding layer designed to capture topological cortical hemodynamics for diagnosing Major Depressive Disorder.
+                Leveraging Explainable AI (XAI) to uncover and interpret the key clinical features for transparent and accurate disease diagnosis.
               </p>
               <div class="project-tech-stack">
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">Channel Embedding</span>
-                <span class="tech-tag">fNIRS</span>
-                <span class="tech-tag">Explainable AI</span>
+                <span class="tech-tag">XAI</span>
+                <span class="tech-tag">Feature Attribution</span>
+                <span class="tech-tag">fNIRS / EEG</span>
+                <span class="tech-tag">CADx</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 3: Wearable EEG Channel Optimization for MCI -->
-          <article class="project-card" data-category="bci">
-            <div class="project-preview preview-gradient-2">
-              <i class="fa-solid fa-microchip project-preview-icon"></i>
-              <div class="project-links-overlay">
-                <a href="#publications" class="project-link-icon" title="View Publication" aria-label="View Publication">
-                  <i class="fa-solid fa-book-open"></i>
-                </a>
-              </div>
+          <!-- Research 3: AI-Driven Cognitive Neuroscience -->
+          <article class="project-card">
+            <div class="project-preview preview-white">
+              <img src="assets/images/research-glasses.png" alt="AI-Driven Cognitive Neuroscience" class="project-preview-img" />
             </div>
             <div class="project-body">
               <div class="project-header">
-                <span class="project-badge">Wearable Neurotech</span>
-                <div class="project-external-links">
-                  <a href="#publications" aria-label="Publication"><i class="fa-solid fa-book-open"></i></a>
-                </div>
+                <span class="project-badge">Cognitive Neuroscience</span>
               </div>
-              <h3 class="project-title">Wearable EEG Channel Optimization for MCI</h3>
+              <h3 class="project-title">AI-Driven Cognitive Neuroscience</h3>
               <p class="project-description">
-                Data-driven optimization of minimal electrode montages on wearable EEG headsets to enable accessible, high-precision screening for Mild Cognitive Impairment (Alzheimer's Research &amp; Therapy).
+                Utilizing machine learning to discover cognitive mechanisms from early childhood development to neurodegeneration.
               </p>
               <div class="project-tech-stack">
-                <span class="tech-tag">Wearable EEG</span>
-                <span class="tech-tag">Electrode Selection</span>
-                <span class="tech-tag">MCI Screening</span>
-                <span class="tech-tag">Machine Learning</span>
+                <span class="tech-tag">Cognitive Science</span>
+                <span class="tech-tag">Wearable Systems</span>
+                <span class="tech-tag">Neural Decoding</span>
               </div>
             </div>
           </article>
 
-          <!-- Project 4: AR & SSVEP Hybrid BCI Home Automation -->
-          <article class="project-card" data-category="bci">
-            <div class="project-preview preview-gradient-3">
-              <i class="fa-solid fa-vr-cardboard project-preview-icon"></i>
-              <div class="project-links-overlay">
-                <a href="#publications" class="project-link-icon" title="View Publication" aria-label="View Publication">
-                  <i class="fa-solid fa-book-open"></i>
-                </a>
-              </div>
+          <!-- Research 4: Personalized Neuromedicine & Closed-Loop Stimulation -->
+          <article class="project-card">
+            <div class="project-preview preview-white">
+              <img src="assets/images/research-development.png" alt="Personalized Neuromedicine & Closed-Loop Stimulation" class="project-preview-img" />
             </div>
             <div class="project-body">
               <div class="project-header">
-                <span class="project-badge">Hybrid BCI + AR</span>
-                <div class="project-external-links">
-                  <a href="#publications" aria-label="Publication"><i class="fa-solid fa-book-open"></i></a>
-                </div>
+                <span class="project-badge">Neuromedicine &amp; Stimulation</span>
               </div>
-              <h3 class="project-title">AR-Integrated SSVEP BCI &amp; EOG Eye Tracker</h3>
+              <h3 class="project-title">Personalized Neuromedicine &amp; Closed-Loop Stimulation</h3>
               <p class="project-description">
-                Feasibility and clinical validation of a hands-free smart home automation system combining Steady-State Visual Evoked Potential (SSVEP) BCI with EOG eye-tracking in augmented reality for elderly users.
+                Optimizing digital healthcare through real-time feedback systems to deliver tailored neuromodulation.
               </p>
               <div class="project-tech-stack">
-                <span class="tech-tag">SSVEP</span>
-                <span class="tech-tag">EOG</span>
-                <span class="tech-tag">Augmented Reality</span>
-                <span class="tech-tag">Assistive Living</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 5: tPBM Treatment Responsiveness Predictor -->
-          <article class="project-card" data-category="neuromodulation">
-            <div class="project-preview preview-gradient-1">
-              <i class="fa-solid fa-lightbulb project-preview-icon"></i>
-              <div class="project-links-overlay">
-                <a href="#publications" class="project-link-icon" title="View Publication" aria-label="View Publication">
-                  <i class="fa-solid fa-book-open"></i>
-                </a>
-              </div>
-            </div>
-            <div class="project-body">
-              <div class="project-header">
-                <span class="project-badge">Neuromodulation</span>
-                <div class="project-external-links">
-                  <a href="#publications" aria-label="Publication"><i class="fa-solid fa-book-open"></i></a>
-                </div>
-              </div>
-              <h3 class="project-title">tPBM Treatment Responsiveness Predictor</h3>
-              <p class="project-description">
-                Machine learning framework extracting hemodynamics from concurrent fNIRS recordings to forecast clinical response to transcranial photobiomodulation (tPBM) therapy in older adults.
-              </p>
-              <div class="project-tech-stack">
-                <span class="tech-tag">tPBM</span>
-                <span class="tech-tag">Concurrent fNIRS</span>
-                <span class="tech-tag">Predictive ML</span>
-                <span class="tech-tag">Cognitive Decline</span>
+                <span class="tech-tag">Closed-Loop</span>
+                <span class="tech-tag">Neuromodulation</span>
+                <span class="tech-tag">Digital Healthcare</span>
+                <span class="tech-tag">Biofeedback</span>
               </div>
             </div>
           </article>
