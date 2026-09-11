@@ -209,29 +209,74 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 9. Contact Form Submission (Client Feedback)
+  // 9. Contact Form Submission (Direct Email via FormSubmit AJAX)
   // ==========================================
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
   if (contactForm && formStatus) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const nameInput = document.getElementById('name');
-      
-      // Simple visual feedback
-      formStatus.className = 'form-status success';
-      formStatus.textContent = `Thank you, ${nameInput ? nameInput.value : 'colleague'}! Your message has been sent successfully.`;
+      const emailInput = document.getElementById('email');
+      const subjectInput = document.getElementById('subject');
+      const messageInput = document.getElementById('message');
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
 
-      // Reset form
-      contactForm.reset();
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+      }
 
-      // Clear notification after 6 seconds
-      setTimeout(() => {
-        formStatus.className = 'form-status';
-        formStatus.textContent = '';
-      }, 6000);
+      formStatus.className = 'form-status';
+      formStatus.style.display = 'block';
+      formStatus.textContent = 'Sending your message...';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/kyeonggu.lee@pusan.ac.kr', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: nameInput ? nameInput.value : '',
+            email: emailInput ? emailInput.value : '',
+            _subject: `[BASIL Lab Website] ${subjectInput ? subjectInput.value : 'Inquiry'}`,
+            message: messageInput ? messageInput.value : '',
+            _template: 'table',
+            _captcha: 'false'
+          })
+        });
+
+        const result = await response.json();
+
+        if (response.ok || result.success === "true" || result.success === true) {
+          formStatus.className = 'form-status success';
+          formStatus.textContent = `Thank you, ${nameInput ? nameInput.value : 'colleague'}! Your message has been sent successfully to Prof. Kyeonggu Lee.`;
+          contactForm.reset();
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
+      } catch (error) {
+        formStatus.className = 'form-status error';
+        formStatus.textContent = 'Failed to send message via form. Please email directly to kyeonggu.lee@pusan.ac.kr.';
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+
+        setTimeout(() => {
+          if (formStatus.classList.contains('success')) {
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
+            formStatus.style.display = '';
+          }
+        }, 8000);
+      }
     });
   }
 
