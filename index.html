@@ -279,70 +279,32 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">// 04. Publications</span>
-          <h2 class="section-title">Featured Publications</h2>
-          <p class="section-subtitle">Peer-reviewed journal articles, preprints, and research contributions across neural engineering and AI.</p>
+          <h2 class="section-title">Publications</h2>
+          <p class="section-subtitle">Peer-reviewed journal articles, preprints, and research contributions.</p>
         </div>
 
-        <!-- Publication Metrics Summary -->
-        <div class="pub-summary-bar">
-          <a href="https://scholar.google.co.kr/citations?user=sEDUmfAAAAAJ&hl=en&cstart=0&pagesize=100" target="_blank" rel="noopener noreferrer" class="pub-stat-card pub-stat-card-link" title="View Google Scholar Profile">
-            <span class="pub-stat-val"><i class="fa-solid fa-graduation-cap" style="font-size:1.1rem; vertical-align:middle;"></i> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.95rem; vertical-align: middle; margin-left: 4px;"></i></span>
-            <span class="pub-stat-label">Google Scholar</span>
+        <!-- Google Scholar Link Button -->
+        <div class="pub-scholar-wrapper">
+          <a href="https://scholar.google.co.kr/citations?user=sEDUmfAAAAAJ&hl=en&cstart=0&pagesize=100" target="_blank" rel="noopener noreferrer" class="btn btn-secondary pub-scholar-btn" title="View Google Scholar Profile">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Google Scholar Profile</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem; margin-left: 4px;"></i>
           </a>
-          <div class="pub-stat-card">
-            <span class="pub-stat-val">8</span>
-            <span class="pub-stat-label">Publications</span>
-          </div>
-          <div class="pub-stat-card">
-            <span class="pub-stat-val">5</span>
-            <span class="pub-stat-label">First-Author Papers</span>
-          </div>
-          <div class="pub-stat-card">
-            <span class="pub-stat-val">Q1</span>
-            <span class="pub-stat-label">Top Tier Venues</span>
-          </div>
-        </div>
-
-        <!-- Controls: Search & Category Filter -->
-        <div class="pub-controls-wrapper">
-          <div class="pub-search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="pub-search-input" class="pub-search-input" placeholder="Search publications by title, author, keyword, or venue..." />
-          </div>
-
-          <div class="project-filters pub-filters">
-            <button class="filter-btn pub-filter-btn active" data-filter="all">All (8)</button>
-            <button class="filter-btn pub-filter-btn" data-filter="first-author">First Author (5)</button>
-            <button class="filter-btn pub-filter-btn" data-filter="fnirs-cadx">fNIRS &amp; CADx</button>
-            <button class="filter-btn pub-filter-btn" data-filter="bci-eeg">BCI &amp; Wearable EEG</button>
-            <button class="filter-btn pub-filter-btn" data-filter="tpbm">tPBM &amp; Neuromodulation</button>
-          </div>
         </div>
 
         <!-- Publications List -->
         <div class="publications-list" id="publications-list">
           <!-- Paper 1: AR & SSVEP BCI -->
-          <article class="publication-card" data-category="bci-eeg" data-year="2022" data-first-author="false">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2022</span>
                 <span class="pub-badge pub-badge-journal">IEEE TNSRE</span>
               </div>
-              <span class="pub-citation-badge high-citation">
-                <i class="fa-solid fa-fire"></i> 54 Citations
-              </span>
             </div>
             <h3 class="pub-title">Brain-controlled, AR-based Home automation system using SSVEP-based brain-computer interface and EOG-based eye tracker: A feasibility study for the elderly end User</h3>
             <p class="pub-authors">S Park, J Ha, J Park, <span class="author-me">K Lee</span>, CH Im</p>
             <p class="pub-journal-venue"><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>, 31, 544-553 (2022)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#SSVEP</span>
-              <span class="pub-tag">#Brain-Computer Interface</span>
-              <span class="pub-tag">#Augmented Reality</span>
-              <span class="pub-tag">#EOG Eye Tracker</span>
-              <span class="pub-tag">#Home Automation</span>
-              <span class="pub-tag">#Elderly End Users</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Park, S., Ha, J., Park, J., Lee, K., &amp; Im, C. H. (2022). Brain-controlled, AR-based Home automation system using SSVEP-based brain-computer interface and EOG-based eye tracker: A feasibility study for the elderly end User. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 31, 544-553.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -357,27 +319,17 @@
           </article>
 
           <!-- Paper 2: Wearable EEG Optimal Channel Configuration for MCI -->
-          <article class="publication-card" data-category="first-author bci-eeg fnirs-cadx" data-year="2022" data-first-author="true">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2022</span>
                 <span class="pub-badge pub-badge-first-author">First Author</span>
                 <span class="pub-badge pub-badge-journal">Alzheimer's Res &amp; Ther</span>
               </div>
-              <span class="pub-citation-badge high-citation">
-                <i class="fa-solid fa-fire"></i> 45 Citations
-              </span>
             </div>
             <h3 class="pub-title">Selection of the optimal channel configuration for implementing wearable EEG devices for the diagnosis of mild cognitive impairment</h3>
             <p class="pub-authors"><span class="author-me">K Lee</span>, KM Choi, S Park, SH Lee, CH Im</p>
             <p class="pub-journal-venue"><em>Alzheimer's Research &amp; Therapy</em>, 14 (1), 170 (2022)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#Wearable EEG</span>
-              <span class="pub-tag">#Mild Cognitive Impairment</span>
-              <span class="pub-tag">#Channel Optimization</span>
-              <span class="pub-tag">#Dementia Diagnosis</span>
-              <span class="pub-tag">#Clinical EEG</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Lee, K., Choi, K. M., Park, S., Lee, S. H., &amp; Im, C. H. (2022). Selection of the optimal channel configuration for implementing wearable EEG devices for the diagnosis of mild cognitive impairment. Alzheimer's Research &amp; Therapy, 14(1), 170.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -392,28 +344,17 @@
           </article>
 
           <!-- Paper 3: fNIRS CNN Channel Embedding Layer for MDD -->
-          <article class="publication-card" data-category="first-author fnirs-cadx" data-year="2024" data-first-author="true">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2024</span>
                 <span class="pub-badge pub-badge-first-author">First Author</span>
                 <span class="pub-badge pub-badge-journal">Depression and Anxiety</span>
               </div>
-              <span class="pub-citation-badge">
-                <i class="fa-solid fa-star"></i> 14 Citations
-              </span>
             </div>
             <h3 class="pub-title">Functional Near-Infrared Spectroscopy-Based Computer-Aided Diagnosis of Major Depressive Disorder Using Convolutional Neural Network with a New Channel Embedding Layer</h3>
             <p class="pub-authors"><span class="author-me">K Lee</span>, J Kwon, M Chun, JK Choi, SH Lee, CH Im</p>
             <p class="pub-journal-venue"><em>Depression and Anxiety</em>, 2024 (1), 4459867 (2024)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#fNIRS</span>
-              <span class="pub-tag">#Deep Learning</span>
-              <span class="pub-tag">#CNN</span>
-              <span class="pub-tag">#Channel Embedding</span>
-              <span class="pub-tag">#Major Depressive Disorder</span>
-              <span class="pub-tag">#CADx</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Lee, K., Kwon, J., Chun, M., Choi, J. K., Lee, S. H., &amp; Im, C. H. (2024). Functional Near-Infrared Spectroscopy-Based Computer-Aided Diagnosis of Major Depressive Disorder Using Convolutional Neural Network with a New Channel Embedding Layer. Depression and Anxiety, 2024(1), 4459867.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -428,28 +369,17 @@
           </article>
 
           <!-- Paper 4: Machine Learning Prediction of Photobiomodulation (tPBM) -->
-          <article class="publication-card" data-category="first-author tpbm fnirs-cadx" data-year="2024" data-first-author="true">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2024</span>
                 <span class="pub-badge pub-badge-first-author">First Author</span>
                 <span class="pub-badge pub-badge-journal">IEEE TNSRE</span>
               </div>
-              <span class="pub-citation-badge">
-                <i class="fa-solid fa-star"></i> 12 Citations
-              </span>
             </div>
             <h3 class="pub-title">Machine-learning-based prediction of photobiomodulation effects on older adults with cognitive decline using functional near-infrared spectroscopy</h3>
             <p class="pub-authors"><span class="author-me">K Lee</span>, M Chun, B Jung, Y Kim, C Yang, JK Choi, J Cha, SH Lee, CH Im</p>
             <p class="pub-journal-venue"><em>IEEE Transactions on Neural Systems and Rehabilitation Engineering</em>, 32, 3710-3718 (2024)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#Photobiomodulation</span>
-              <span class="pub-tag">#tPBM</span>
-              <span class="pub-tag">#fNIRS</span>
-              <span class="pub-tag">#Machine Learning</span>
-              <span class="pub-tag">#Cognitive Decline</span>
-              <span class="pub-tag">#Neuromodulation</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Lee, K., Chun, M., Jung, B., Kim, Y., Yang, C., Choi, J. K., Cha, J., Lee, S. H., &amp; Im, C. H. (2024). Machine-learning-based prediction of photobiomodulation effects on older adults with cognitive decline using functional near-infrared spectroscopy. IEEE Transactions on Neural Systems and Rehabilitation Engineering, 32, 3710-3718.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -464,26 +394,17 @@
           </article>
 
           <!-- Paper 5: Frontiers in Aging Neuroscience tPBM -->
-          <article class="publication-card" data-category="tpbm fnirs-cadx" data-year="2026" data-first-author="false">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2026</span>
+                <span class="pub-badge pub-badge-first-author">Co-First Author</span>
                 <span class="pub-badge pub-badge-journal">Frontiers in Aging Neuroscience</span>
               </div>
-              <span class="pub-citation-badge">
-                <i class="fa-solid fa-bookmark"></i> 2 Citations
-              </span>
             </div>
             <h3 class="pub-title">Prediction of treatment responsiveness to home-based transcranial photobiomodulation (tPBM) intervention for cognitive decline using fNIRS concurrently recorded during tPBM</h3>
-            <p class="pub-authors">M Chun, <span class="author-me">K Lee</span>, B Jung, Y Kim, C Yang, JK Choi, J Cha, SH Lee, CH Im</p>
+            <p class="pub-authors">M Chun*, <span class="author-me">K Lee*</span>, B Jung, Y Kim, C Yang, JK Choi, J Cha, SH Lee, CH Im</p>
             <p class="pub-journal-venue"><em>Frontiers in Aging Neuroscience</em>, 18, 1716502 (2026)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#tPBM</span>
-              <span class="pub-tag">#Concurrent fNIRS</span>
-              <span class="pub-tag">#Home-Based Therapy</span>
-              <span class="pub-tag">#Cognitive Decline</span>
-              <span class="pub-tag">#Treatment Responsiveness</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Chun, M., Lee, K., Jung, B., Kim, Y., Yang, C., Choi, J. K., Cha, J., Lee, S. H., &amp; Im, C. H. (2026). Prediction of treatment responsiveness to home-based transcranial photobiomodulation (tPBM) intervention for cognitive decline using fNIRS concurrently recorded during tPBM. Frontiers in Aging Neuroscience, 18, 1716502.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -498,25 +419,17 @@
           </article>
 
           <!-- Paper 6: JIEC Brain Delivery -->
-          <article class="publication-card" data-category="tpbm" data-year="2025" data-first-author="false">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2025</span>
+                <span class="pub-badge pub-badge-first-author">Co-First Author</span>
                 <span class="pub-badge pub-badge-journal">J. Ind. Eng. Chem.</span>
               </div>
-              <span class="pub-citation-badge">
-                <i class="fa-solid fa-bookmark"></i> 1 Citation
-              </span>
             </div>
             <h3 class="pub-title">Infusion and iontophoresis for directional delivery of compounds to the brain</h3>
-            <p class="pub-authors">HB Ji, JH Han, CH Min, J Park, <span class="author-me">K Lee</span>, SB Yoon, EJ Kwon, CR Kim, et al.</p>
+            <p class="pub-authors">HB Ji*, JH Han*, CH Min*, J Park*, <span class="author-me">K Lee*</span>, SB Yoon, EJ Kwon, CR Kim, et al.</p>
             <p class="pub-journal-venue"><em>Journal of Industrial and Engineering Chemistry</em> (2025)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#Targeted Delivery</span>
-              <span class="pub-tag">#Iontophoresis</span>
-              <span class="pub-tag">#Brain Delivery</span>
-              <span class="pub-tag">#Neural Engineering</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Ji, H. B., Han, J. H., Min, C. H., Park, J., Lee, K., Yoon, S. B., Kwon, E. J., &amp; Kim, C. R. (2025). Infusion and iontophoresis for directional delivery of compounds to the brain. Journal of Industrial and Engineering Chemistry.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -531,27 +444,17 @@
           </article>
 
           <!-- Paper 7: SSRN Meta-Classification MDD -->
-          <article class="publication-card" data-category="first-author fnirs-cadx" data-year="2025" data-first-author="true">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2025</span>
                 <span class="pub-badge pub-badge-first-author">First Author</span>
                 <span class="pub-badge pub-badge-journal">SSRN Preprint</span>
               </div>
-              <span class="pub-citation-badge">
-                <i class="fa-solid fa-bookmark"></i> 1 Citation
-              </span>
             </div>
             <h3 class="pub-title">Functional Near-Infrared Spectroscopy-Based Computer-Aided Diagnosis of Major Depressive Disorder: A Meta-Classification Approach Integrating Multiple Task-Specific Classifiers</h3>
             <p class="pub-authors"><span class="author-me">K Lee</span>, J Kwon, M Chun, JK Choi, SH Lee, CH Im</p>
             <p class="pub-journal-venue"><em>Available at SSRN 5592143</em> (2025)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#fNIRS</span>
-              <span class="pub-tag">#Meta-Classification</span>
-              <span class="pub-tag">#Major Depressive Disorder</span>
-              <span class="pub-tag">#Multi-Task Classifiers</span>
-              <span class="pub-tag">#CADx</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Lee, K., Kwon, J., Chun, M., Choi, J. K., Lee, S. H., &amp; Im, C. H. (2025). Functional Near-Infrared Spectroscopy-Based Computer-Aided Diagnosis of Major Depressive Disorder: A Meta-Classification Approach Integrating Multiple Task-Specific Classifiers. SSRN Electronic Journal, 5592143.">
                 <i class="fa-regular fa-copy"></i> Copy APA
@@ -566,28 +469,17 @@
           </article>
 
           <!-- Paper 8: Journal of Affective Disorders XAI MDD -->
-          <article class="publication-card" data-category="first-author fnirs-cadx" data-year="2025" data-first-author="true">
+          <article class="publication-card">
             <div class="pub-meta-top">
               <div class="pub-meta-badges">
                 <span class="pub-badge pub-badge-year">2025</span>
                 <span class="pub-badge pub-badge-first-author">First Author</span>
                 <span class="pub-badge pub-badge-journal">J. Affective Disorders</span>
               </div>
-              <span class="pub-citation-badge">
-                <i class="fa-solid fa-sparkles"></i> Recent Article
-              </span>
             </div>
             <h3 class="pub-title">Functional near-infrared spectroscopy-based computer-aided diagnosis of major depressive disorder using explainable artificial intelligence: Comparison with conventional machine learning</h3>
             <p class="pub-authors"><span class="author-me">K Lee</span>, M Chun, J Kwon, JK Choi, SH Lee, CH Im</p>
             <p class="pub-journal-venue"><em>Journal of Affective Disorders</em>, art. no. 120985 (2025)</p>
-            <div class="pub-tags">
-              <span class="pub-tag">#fNIRS</span>
-              <span class="pub-tag">#Explainable AI</span>
-              <span class="pub-tag">#XAI</span>
-              <span class="pub-tag">#SHAP</span>
-              <span class="pub-tag">#Major Depressive Disorder</span>
-              <span class="pub-tag">#Clinical Neurodiagnostics</span>
-            </div>
             <div class="pub-actions">
               <button class="pub-btn copy-btn" data-citation="Lee, K., Chun, M., Kwon, J., Choi, J. K., Lee, S. H., &amp; Im, C. H. (2025). Functional near-infrared spectroscopy-based computer-aided diagnosis of major depressive disorder using explainable artificial intelligence: Comparison with conventional machine learning. Journal of Affective Disorders, 120985.">
                 <i class="fa-regular fa-copy"></i> Copy APA
