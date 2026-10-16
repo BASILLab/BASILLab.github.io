@@ -1702,23 +1702,6 @@ a {
     gap: 1.5rem;
   }
 
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pi-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .team-photo-wrap {
-    margin: 0 auto;
-  }
-
-  .team-links {
-    justify-content: center;
-  }
 }
 
 /* ==========================================================================
@@ -1726,13 +1709,14 @@ a {
    ========================================================================== */
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 2rem;
   align-items: start;
 }
 
 /* PI Card */
 .team-card {
+  min-width: 0;
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -1773,6 +1757,8 @@ a {
 
 .team-info {
   flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .team-role-badge {
@@ -1883,6 +1869,39 @@ a {
   font-size: 0.92rem;
   color: var(--text-secondary);
   line-height: 1.65;
+}
+
+/* Keep responsive team rules after the base card styles. */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pi-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .team-info {
+    width: 100%;
+  }
+
+  .team-photo-wrap {
+    margin: 0 auto;
+  }
+
+  .team-links {
+    justify-content: center;
+  }
+
+  .team-link {
+    max-width: 100%;
+  }
 }
 
 /* ==========================================================================
