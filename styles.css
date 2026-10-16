@@ -1549,6 +1549,36 @@ a {
   border-radius: var(--radius-sm);
 }
 
+.pub-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.45rem 0.65rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.pub-metric {
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  background: var(--bg-secondary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.pub-metric-context,
+.pub-metrics-note {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.pub-metrics-note {
+  margin: -1rem 0 1.5rem;
+}
+
 .pub-actions {
   display: flex;
   flex-wrap: wrap;
