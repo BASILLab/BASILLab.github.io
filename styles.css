@@ -1744,7 +1744,13 @@ a {
   align-items: start;
 }
 
-/* PI Card */
+.team-members {
+  display: grid;
+  min-width: 0;
+  gap: 2rem;
+}
+
+/* Team Member Cards */
 .team-card {
   min-width: 0;
   background: var(--bg-card);
@@ -1761,7 +1767,8 @@ a {
   box-shadow: var(--shadow-lg);
 }
 
-.pi-card {
+.pi-card,
+.member-card {
   display: flex;
   gap: 2rem;
   padding: 2rem;
@@ -1783,6 +1790,11 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+}
+
+.member-card .team-photo {
+  object-fit: contain;
+  background: #fff;
 }
 
 .team-info {
@@ -1909,7 +1921,8 @@ a {
 }
 
 @media (max-width: 768px) {
-  .pi-card {
+  .pi-card,
+  .member-card {
     flex-direction: column;
     align-items: center;
     text-align: center;
