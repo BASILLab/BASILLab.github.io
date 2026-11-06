@@ -2144,4 +2144,5 @@ a {
 
 .hero-banner-image {
   opacity: 0.9;
+  height: calc(100svh - 2rem);
 }
