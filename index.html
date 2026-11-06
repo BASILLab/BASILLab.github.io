@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261106-team-layout" />
+  <link rel="stylesheet" href="styles.css?v=20261106-hero-banner" />
 </head>
 <body>
   <!-- Background Glow Accents -->
@@ -46,8 +46,11 @@
   <header class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-name">BASIL Lab</span>
-        <span class="logo-fullname">Biomedical AI for SIgnaLs Laboratory</span>
+        <img src="assets/images/basil-lab-logo.png" alt="" class="nav-logo-image" width="46" height="46" />
+        <span class="nav-logo-text">
+          <span class="logo-name">BASIL Lab</span>
+          <span class="logo-fullname">Pusan National University</span>
+        </span>
       </a>
 
       <nav class="nav-menu" id="nav-menu">
@@ -80,32 +83,8 @@
 
   <main>
     <!-- Hero Section -->
-    <section class="hero section" id="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            <span><i class="fa-solid fa-building-columns"></i> Pusan National University</span>
-          </div>
-          <h1 class="hero-title">
-            Welcome to <span class="gradient-text">BASIL Lab</span>
-          </h1>
-          <p class="hero-description">
-            At <strong>BASIL Lab</strong> (Biomedical AI for SIgnaLs Laboratory), we harness the power of <strong>Artificial Intelligence</strong> to decode and understand complex <strong>biomedical signals</strong> — from brain waves (EEG, fNIRS) to physiological biosignals — transforming raw neural data into <strong>clinical insights</strong> for early disease diagnosis, next-generation <strong>Brain-Computer Interfaces (BCI)</strong>, and fundamental discoveries in <strong>Cognitive Neuroscience</strong>.
-          </p>
-        </div>
-
-        <div class="hero-visual">
-          <div class="avatar-card">
-            <div class="avatar-glow"></div>
-            <div class="avatar-inner">
-              <div class="avatar-icon">
-                <img src="assets/images/basil-lab-logo.png" alt="BASIL LAB — Biomedical AI for SIgnaLs" class="basil-lab-logo" width="250" height="253" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="hero-banner" id="hero" aria-label="BASIL Lab">
+      <img src="assets/images/basil-leaf-banner.png" alt="Close-up of basil leaf veins with subtle light tracing neural signal pathways" class="hero-banner-image" fetchpriority="high" />
     </section>
 
     <!-- Team Section -->

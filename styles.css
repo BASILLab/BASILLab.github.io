@@ -250,9 +250,9 @@ a {
 .nav-logo {
   font-family: var(--font-mono);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1px;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65rem;
   text-decoration: none;
 }
 
@@ -2028,4 +2028,38 @@ a {
   font-size: 0.98rem;
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+/* Image-only landing banner and compact lab identity. */
+.nav-logo-image {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.hero-banner {
+  padding-top: 0;
+}
+.hero-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    gap: 0.4rem;
+  }
+  .nav-logo-image {
+    width: 40px;
+    height: 40px;
+  }
 }
