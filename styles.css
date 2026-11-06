@@ -2155,5 +2155,5 @@ a {
   overflow: hidden;
 }
 .hero-leaf-frame .hero-banner-image { height: 100%; opacity: 1; }
-.leaf-flow-overlay { position: absolute; inset: 0; pointer-events: none; }
+.leaf-flow-overlay { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; }
 @media (prefers-reduced-motion: reduce) { .leaf-flow-overlay { display: none; } }
