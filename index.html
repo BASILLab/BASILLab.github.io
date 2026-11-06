@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=20261106-leaf-spacing" />
+  <link rel="stylesheet" href="styles.css?v=20261106-leaf-flow" />
 </head>
 <body>
   <!-- Background Glow Accents -->
@@ -84,7 +84,30 @@
   <main>
     <!-- Hero Section -->
     <section class="hero-banner" id="hero" aria-label="BASIL Lab">
-      <img src="assets/images/basil-leaf-hero.png" alt="Magnified basil leaf veins illuminated by neural signal-like light" class="hero-banner-image" fetchpriority="high" />
+      <div class="hero-leaf-frame">
+        <img src="assets/images/basil-leaf-hero.png" alt="Magnified basil leaf veins illuminated by neural signal-like light" class="hero-banner-image" fetchpriority="high" />
+        <svg class="hero-banner-image leaf-flow-overlay" viewBox="0 0 1775 886" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <filter id="lit-veins-only" color-interpolation-filters="sRGB">
+              <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -2.1 0.56 2.1 0 -0.21" />
+            </filter>
+            <mask id="existing-vein-light" mask-type="alpha">
+              <image href="assets/images/basil-leaf-hero.png" width="1775" height="886" filter="url(#lit-veins-only)" />
+            </mask>
+            <linearGradient id="flowing-vein-light" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1775" y2="0">
+              <stop offset="0" stop-color="#c5fff5" stop-opacity="0" />
+              <stop offset="0.15" stop-color="#c5fff5" stop-opacity="0" />
+              <stop offset="0.3" stop-color="#eaffff" stop-opacity="1" />
+              <stop offset="0.45" stop-color="#c5fff5" stop-opacity="0" />
+              <stop offset="0.65" stop-color="#c5fff5" stop-opacity="0" />
+              <stop offset="0.8" stop-color="#eaffff" stop-opacity="1" />
+              <stop offset="1" stop-color="#c5fff5" stop-opacity="0" />
+              <animateTransform attributeName="gradientTransform" type="translate" from="-1775 0" to="1775 0" dur="9s" repeatCount="indefinite" />
+            </linearGradient>
+          </defs>
+          <rect width="1775" height="886" fill="url(#flowing-vein-light)" mask="url(#existing-vein-light)" />
+        </svg>
+      </div>
     </section>
 
     <!-- Team Section -->

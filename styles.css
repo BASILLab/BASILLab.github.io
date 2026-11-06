@@ -2146,3 +2146,14 @@ a {
   opacity: 0.9;
   height: calc(100svh - 2rem);
 }
+
+/* Flowing highlights preserve the original leaf image and composition. */
+.hero-leaf-frame {
+  position: relative;
+  height: calc(100svh - 2rem);
+  opacity: 0.9;
+  overflow: hidden;
+}
+.hero-leaf-frame .hero-banner-image { height: 100%; opacity: 1; }
+.leaf-flow-overlay { position: absolute; inset: 0; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { .leaf-flow-overlay { display: none; } }
