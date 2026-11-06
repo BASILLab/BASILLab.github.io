@@ -2141,3 +2141,7 @@ a {
   font-weight: 800;
   letter-spacing: -0.02em;
 }
+
+.hero-banner-image {
+  opacity: 0.9;
+}
