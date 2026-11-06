@@ -2107,11 +2107,11 @@ a {
 /* Readable translucent navigation over the leaf banner. */
 .navbar {
   position: fixed;
-  background: rgba(249, 253, 251, 0.80);
+  background: rgba(249, 253, 251, 0.70);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
-[data-theme="dark"] .navbar { background: rgba(10, 24, 20, 0.80); }
+[data-theme="dark"] .navbar { background: rgba(10, 24, 20, 0.70); }
 .logo-name { font-size: 1.85rem; font-weight: 800; }
 .logo-fullname {
   font-size: 0.9rem;
@@ -2151,9 +2151,15 @@ a {
 .hero-leaf-frame {
   position: relative;
   height: calc(100svh - 2rem);
-  opacity: 0.9;
+  opacity: 0.85;
   overflow: hidden;
 }
 .hero-leaf-frame .hero-banner-image { height: 100%; opacity: 1; }
 .leaf-flow-overlay { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; }
 @media (prefers-reduced-motion: reduce) { .leaf-flow-overlay { display: none; } }
+
+/* Give the lab identity a little more room on the left. */
+.nav-logo { transform: translateX(-1.5rem); }
+@media (max-width: 768px) {
+  .nav-logo { transform: translateX(-0.5rem); }
+}
