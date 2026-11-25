@@ -2163,3 +2163,5 @@ a {
 @media (max-width: 768px) {
   .nav-logo { transform: translateX(-0.5rem); }
 }
+
+.pub-badge-status { color: var(--primary); border: 1px dashed var(--primary); background: var(--bg-secondary); }
